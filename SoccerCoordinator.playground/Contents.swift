@@ -19,9 +19,12 @@ var allPlayers : [String:[String:String]] = [
     "Phillip Helm":["Height":"44 inch","Soccer Experience":"YES","Guardians":"Thomas Helm and Eva Jones"],
     "Les Clay":["Height":"42 inch","Soccer Experience":"YES","Guardians":"Wynonna Brown"],
     "Herschel Krustofski":["Height":"45 inch","Soccer Experience":"YES","Guardians":"Hyman and Rachel Krustofski"],
-    ]
+]
+
 
 //Accession dictionary to modify player information based only on soccer experience//
+
+allPlayers.count
 
 allPlayers ["Joe Smith"] = ["Soccer Experience":"YES"]
 allPlayers ["Jill Tanner"] = ["Soccer Experience":"YES"]
@@ -44,11 +47,13 @@ allPlayers ["Ben Finkelstein"] = ["Soccer Experience":"NO"]
 allPlayers ["Chloe Alaska"] = ["Soccer Experience":"NO"]
 allPlayers ["Arnold Willis"] = ["Soccer Experience":"NO"]
 
+
 //Empty variable//
 
 var allPlayersData = [""]
 
-//Iteration over dictionary with for in loop and string interpolation //
+
+//Iteration over dictionary to create equally teams,with for in loop and string interpolation //
 
 for firstTeam in allPlayersData {
     print("Team Dragon \(allPlayers["Joe Smith"]) + \(allPlayers["Jill Tanner"]) + \(allPlayers["Bill Bon"]) + \(allPlayers["Eva Gordon"]!) + \(allPlayers["Matt Grill"]) + \(allPlayers["Kimmy Stein"])")
@@ -58,38 +63,19 @@ for secondTeam in allPlayersData {
     print("Team Sharks \(allPlayers["Karl Saygan"]) + \(allPlayers["Suzane Greenberg"]) + \(allPlayers["Diego Sotto"]) + \(allPlayers["Sammy Adams"]) + \(allPlayers["Sal Dali"]) + \(allPlayers["Joe Kavalier"])")
 }
 
-for thirdTe in allPlayersData{
-    print("Team Raptors \(allPlayers["Karl Saygan"]) + \(allPlayers["Suzane Greenberg"]) + \(allPlayers["Diego Sotto"]) + \(allPlayers["Sammy Adams"]) + \(allPlayers["Sal Dali"]) + \(allPlayers["Joe Kavalier"])")
+for thirdTeam in allPlayersData{
+    print("Team Raptors \(allPlayers["Phillip Helm"]) + \(allPlayers["Les Clay"]) + \(allPlayers["Herschel Krustofski"]) + \(allPlayers["Ben Finkelstein"]) + \(allPlayers["Chloe Alaska"]) + \(allPlayers["Arnold Willis"])")
 }
 
-//Each team collection variable//
 
-var teamDragons : [String] = [
-    "Joe Smith",
-    "Jill Tanner",
-    "Bill Bon",
-    "Eva Gordon",
-    "Matt Grill",
-    "Kimmy Stein"
-]
+//Each team's players collection variable//
 
-var teamSharks : [String] = [
-    "Karl Saygan",
-    "Suzane Greenberg",
-    "Diego Soto",
-    "Sammy Adams",
-    "Sal Dali",
-    "Joe Kavalier"
-]
+var teamDragons : [String:String] = ["Team Dragon":"Joe Smith,Jill Tanner,Bill Bon,Eva Gordon,Matt Grill,Kimmy Stein"]
 
-var teamRaptors : [String] = [
-    "Phillip Helm",
-    "Les Clay",
-    "Herschel Krustofski",
-    "Ben Finkelstein",
-    "Chloe Alaska",
-    "Arnold Willis"
-]
+var teamSharks : [String:String] = ["Team Sharks":"Karl Saygan,Suzane Greenberg,Diego Sotto,Sammy Adams,Sal Dali,Joe Kavalier"]
+
+var teamRaptors : [String:String] = ["Team Raptors":"Phillip Helm,Les Clay,Herschel Krustofski,Ben Finkelstein,Chloe Alaska,Arnold Willis"]
+
 
 //Average team height within 1.5 using If Statement//
 
@@ -106,91 +92,34 @@ if averageHeight == 1.5 {
 }
 
 
-//Personalized guardians letters,with Switch Statement//
+//Personalized guardians letters,using Function//
 
-for guardiansLetter in teamDragons {
-
-    switch guardiansLetter {
-        
-    case "Joe Smith":
-        print("Dear Jim and Jane I am going to be very pleased to meet you,on first Joe's / Dragons Team practice on March 17,at 1pm.Best Regards!")
-        
-    case "Jill Tanner":
-        print("Dear Clara I am going to be very pleased to meet you,on first Jill's / Dragons Team practice on March 17,at 1pm.Best Regards!")
-        
-    case "Bill Bon":
-        print("Dear Sara and Jenny I am going to be very pleased to meet you,on first Bill's / Dragons Team practice on March 17,at 1pm.Best Regards!")
+func generatingPersonalizedLetter(teamPlayers: String, guardians: String,team: String) -> (String) {
+    let letterToGuardians = "Dear " + guardians + " I am going to be very pleased and happy to meet you on " + teamPlayers + " first practice for " + team + ".Best Regards!"
     
-    case "Eva Gordon":
-        print("Dear Wendy and Mike I am going to be very pleased to meet you,on first Eva's / Dragons Team practice on March 17,at 1pm.Best Regards!")
-        
-    case "Matt Grill":
-        print("Dear Charles and Sylvia I am going to be very pleased to meet you,on first Matt's / Dragons Team practice on March 17,at 1pm.Best Regards!")
-        
-    case "Kimmy Stein":
-        print("Dear Bill and Hillary I am going to be very pleased to meet you,on first Kimmy's / Dragons Team practice on March 17,at 1pm.Best Regards!")
-        
-    default: print("This player is from fourth team")
-    }
+    return letterToGuardians
 }
 
-for guardiansLetter in teamSharks {
-    
-    switch guardiansLetter {
-        
-    case "Karl Saygan":
-        print("Dear Heather I am going to be very pleased to meet you,on first Karl's / Sharks Team practice on March 17,at 3pm.Best Regards!")
-        
-    case "Suzane Greenberg":
-        print("Dear Henrietta I am going to be very pleased to meet you,on first Suzane's / Sharks Team practice on March 17,at 3pm.Best Regards!")
-        
-    case "Diego Soto":
-        print("Dear Robina and Sarika I am going to be very pleased to meet you,on first Diego's / Sharks Team practice on March 17,at 3pm.Best Regards!")
-        
-    case "Sammy Adams":
-        print("Dear Jeff I am going to be very pleased to meet you,on first Sammy's / Sharks Team practice on March 17,at 3pm.Best Regards!")
-        
-    case "Sal Dali":
-        print("Dear Gala I am going to be very pleased to meet you,on first Sal's / Sharks Team practice on March 17,at 3pm.Best Regards!")
-        
-    case "Joe Kavalier":
-        print("Dear Sam and Elaine I am going to be very pleased to meet you,on first Joe's / Sharks Team practice on March 17,at 3pm.Best Regards!")
-        
-    default: print("This player is from fourth team")
-    }
-}
+print(generatingPersonalizedLetter(teamPlayers: "Joe's", guardians: "Jim and Jane",team: "Team Dragons on March 17,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Jill's", guardians: "Clara",team: "Team Dragons on March 17,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Bill's", guardians: "Sara and Jenny",team: "Team Dragons on March 17,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Eva's", guardians: "Wendy and Mike",team: "Team Dragons on March 17,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Matt's", guardians: "Charles and Sylvia",team: "Team Dragons on March 17,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Kimmy's", guardians: "Bill and Hillary",team: "Team Dragons on March 17,at 1pm"))
 
-for guardiansLetter in teamRaptors {
-    
-    switch guardiansLetter {
-        
-    case "Phillip Helm":
-        print("Dear Thomas and Eva I am going to be very pleased to meet you,on first Phillip's / Raptors Team practice on March 18,at 1pm.Best Regards!")
-        
-    case "Les Clay":
-        print("Dear Wynnona I am going to be very pleased to meet you,on first Les's / Raptors Team practice on March 18,at 1pm.Best Regards!")
-        
-    case "Herschel Krustofski":
-        print("Dear Hyman and Rachel I am going to be very pleased to meet you,on first Herschel's / Raptors Team practice on March 18,at 1pm.Best Regards!")
-        
-    case "Ben Finkelstein":
-        print("Dear Aaron and Jill I am going to be very pleased to meet you,on first Ben's / Raptors Team practice on March 18,at 1pm.Best Regards!")
-        
-    case "Chloe Alaska":
-        print("Dear David and Jamie I am going to be very pleased to meet you,on first Chloe's / Raptors Team practice on March 18,at 1pm.Best Regards!")
-        
-    case "Arnold Willis":
-        print("Dear Claire I am going to be very pleased to meet you,on first Arnolds's / Raptors Team practice on March 18,at 1pm.Best Regards!")
-        
-    default: print("This player is from fourth team")
-    }
-}
+print(generatingPersonalizedLetter(teamPlayers: "Karl's", guardians: "Heather",team: "Team Sharks on March 17,at 3pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Suzane's", guardians: "Henrietta",team: "Team Sharks on March 17,at 3pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Diego's", guardians: "Robin and Sarika",team: "Team Sharks on March 17,at 3pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Sammy's", guardians: "Jeff",team: "Team Sharks on March 17,at 3pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Sal's", guardians: "Gala",team: "Team Sharks on March 17,at 3pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Joe's", guardians: "Sam and Elaine",team: "Team Sharks on March 17,at 3pm"))
 
-
-
-
-
-
+print(generatingPersonalizedLetter(teamPlayers: "Phillip's", guardians: "Thomas and Eva",team: "Team Raptors on March 18,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Les's", guardians: "Wynonna",team: "Team Raptors on March 18,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Herschel's", guardians: "Hyman and Rachel",team: "Team Raptors on March 18,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Ben's", guardians: "Aaron and Jill",team: "Team Raptors on March 18,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Chloe's", guardians: "David and Jamie",team: "Team Raptors on March 18,at 1pm"))
+print(generatingPersonalizedLetter(teamPlayers: "Arnold's", guardians: "Claire",team: "Team Raptors on March 18,at 1pm"))
 
 
 

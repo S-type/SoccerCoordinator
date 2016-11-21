@@ -1,125 +1,242 @@
-//Creating collection data with Dictionary & Array of String//
+//Creating collection data for each player with Array of Dictionary//
 
-var allPlayers : [String:[String:String]] = [
-    "Joe Smith": ["Height":"42 inch","Soccer Experience":"YES","Guardians":"Jim and Jan Smith"],
-    "Jill Tanner":["Height":"36 inch","Soccer Experience":"YES","Guardians":"Clara Tanner"],
-    "Bill Bon":["Height":"43 inch","Soccer Experience":"YES","Guardians":"Sara and Jenny Bon"],
-    "Eva Gordon":["Height":"45 inch","Soccer Experience":"NO","Guardians":"Wendy and Mike Gordon"],
-    "Matt Grill":["Height":"40 inch","Soccer Experience":"NO","Guardians":"Charles and Sylvia Grill"],
-    "Kimmy Stein":["Height":"41 inch","Soccer Experience":"NO","Guardians":"Bill and Hillary Stein"],
-    "Sammy Adams":["Height":"45 inch","Soccer Experience":"NO","Guardians":"Jeff Adams"],
-    "Karl Saygan":["Height":"42 inch","Soccer Experience":"YES","Guardians":"Heather Bledsoe"],
-    "Suzane Greenberg":["Height":"44 inch","Soccer Experience":"YES","Guardians":"Henrietta Dumas"],
-    "Sal Dali":["Height":"41 inch","Soccer Experience":"NO","Guardians":"Gala Dali"],
-    "Joe Kavalier":["Height":"39 inch","Soccer Experience":"No","Guardians":"Sam and Elaine Kavalier"],
-    "Ben Finkelstein":["Height":"44 inch","Soccer Experience":"NO","Guardians":"Aaron and Jill Finkelstein"],
-    "Diego Soto":["Height":"41 inch","Soccer Experience":"YES","Guardians":"Robin and Sarika Soto"],
-    "Chloe Alaska":["Height":"47 inch","Soccer Experience":"NO","Guardians":"David and Jamie Alaska"],
-    "Arnold Willis":["Height":"43 inch","Soccer Experience":"NO","Guardians":"Claire Willis"],
-    "Phillip Helm":["Height":"44 inch","Soccer Experience":"YES","Guardians":"Thomas Helm and Eva Jones"],
-    "Les Clay":["Height":"42 inch","Soccer Experience":"YES","Guardians":"Wynonna Brown"],
-    "Herschel Krustofski":["Height":"45 inch","Soccer Experience":"YES","Guardians":"Hyman and Rachel Krustofski"],
+
+var player1 : [String:String] = [
+    "Player name" : "Joe Smith",
+    "Height" : "42inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Jim and Jan Smith"
+]
+
+var player2 : [String:String] = [
+    "Player name" : "Jill Tanner",
+    "Height" : "36inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Clara Tanner"
+]
+
+var player3 : [String:String] = [
+    "Player name" : "Bill Bon",
+    "Height" : "43inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Sara and Jenny Bon"
+]
+
+var player4 : [String:String] = [
+    "Player name" : "Eva Gordon",
+    "Height" : "45inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "Wendy and Mike Gordon"
+]
+
+var player5 : [String:String] = [
+    "Player name" : "Matt Grill",
+    "Height" : "40inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "Charles and Sylvia Grill"
+]
+
+var player6 : [String:String] = [
+    "Player name" : "Kimmy Stein",
+    "Height" : "41inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "Bill and Hillary Stein"
+]
+
+var player7 : [String:String] = [
+    "Player name" : "Sammy Adams",
+    "Height" : "45inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "Jeff Adams"
+]
+
+var player8 : [String:String] = [
+    "Player name" : "Karl Saygan",
+    "Height" : "42inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Heather Bledsoe"
+]
+
+var player9 : [String:String] = [
+    "Player name" : "Suzane Grenberg",
+    "Height" : "44inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Henrietta Dumas"
+]
+
+var player10 : [String:String] = [
+    "Player name" : "Sal Dali",
+    "Height" : "41inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "Gala Dali"
+]
+
+var player11 : [String:String] = [
+    "Player name" : "Joe Kavalier",
+    "Height" : "39inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "Sam and Elaine Kavalier"
+]
+
+var player12 : [String:String] = [
+    "Player name" : "Ben Finkelstein",
+    "Height" : "44inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "Aaron and Jill Finkelstein"
+]
+
+var player13 : [String:String] = [
+    "Player name" : "Diego Soto",
+    "Height" : "41inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Robin and Sarika Soto"
+]
+
+var player14 : [String:String] = [
+    "Player name" : "Chloe Alaska",
+    "Height" : "47inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "David and Jamie Alaska"
+]
+
+var player15 : [String:String] = [
+    "Player name" : "Arnold Willis",
+    "Height" : "43inch",
+    "Soccer Experience" : "NO",
+    "Guardians" : "Claire Willis"
+]
+
+var player16 : [String:String] = [
+    "Player name" : "Phillip Helm",
+    "Height" : "44inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Thomas Helm and Eva Jones"
+]
+
+var player17 : [String:String] = [
+    "Player name" : "Les Clay",
+    "Height" : "42inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Wynonna Brown"
+]
+
+var player18 : [String:String] = [
+    "Player name" : "Herchel Krustofski",
+    "Height" : "45inch",
+    "Soccer Experience" : "YES",
+    "Guardians" : "Hyman and Rachel Krustofski"
+    
+    
 ]
 
 
-//Accession dictionary to modify player information based only on soccer experience//
+//Variable that holds all players data//
 
-allPlayers.count
-
-allPlayers ["Joe Smith"] = ["Soccer Experience":"YES"]
-allPlayers ["Jill Tanner"] = ["Soccer Experience":"YES"]
-allPlayers ["Bill Bon"] = ["Soccer Experience":"YES"]
-allPlayers ["Eva Gordon"] = ["Soccer Experience":"NO"]
-allPlayers ["Matt Grill"] = ["Soccer Experience":"NO"]
-allPlayers ["Kimmy Stein"] = ["Soccer Experience":"NO"]
-
-allPlayers ["Karl Saygan"] = ["Soccer Experience":"YES"]
-allPlayers ["Suzane Greenberg"] = ["Soccer Experience":"YES"]
-allPlayers ["Diego Sotto"] = ["Soccer Experience":"YES"]
-allPlayers ["Sammy Adams"] = ["Soccer Experience":"NO"]
-allPlayers ["Sal Dali"] = ["Soccer Experience":"NO"]
-allPlayers ["Joe Kavalier"] = ["Soccer Experience":"NO"]
-
-allPlayers ["Phillip Helm"] = ["Soccer Experience":"YES"]
-allPlayers ["Les Clay"] = ["Soccer Experience":"YES"]
-allPlayers ["Herschel Krustofski"] = ["Soccer Experience":"YES"]
-allPlayers ["Ben Finkelstein"] = ["Soccer Experience":"NO"]
-allPlayers ["Chloe Alaska"] = ["Soccer Experience":"NO"]
-allPlayers ["Arnold Willis"] = ["Soccer Experience":"NO"]
+var allPlayers : [[String:String]] = [player1,player2,player3,player4,player5,player6,player7,player8,player9,player10,player11,player12,player13,player14,player15,player16,player17,player18]
 
 
-//Empty variable//
+//Players division based on Soccer Experience and formation of equal teams//
 
-var allPlayersData = [""]
+var playersWithExperience  : [[String:String]] = []
+var playersWithNoExperience : [[String:String]] = []
 
-
-//Iteration over dictionary to create equally teams,with for in loop and string interpolation //
-
-for firstTeam in allPlayersData {
-    print("Team Dragon \(allPlayers["Joe Smith"]) + \(allPlayers["Jill Tanner"]) + \(allPlayers["Bill Bon"]) + \(allPlayers["Eva Gordon"]!) + \(allPlayers["Matt Grill"]) + \(allPlayers["Kimmy Stein"])")
-}
-
-for secondTeam in allPlayersData {
-    print("Team Sharks \(allPlayers["Karl Saygan"]) + \(allPlayers["Suzane Greenberg"]) + \(allPlayers["Diego Sotto"]) + \(allPlayers["Sammy Adams"]) + \(allPlayers["Sal Dali"]) + \(allPlayers["Joe Kavalier"])")
-}
-
-for thirdTeam in allPlayersData{
-    print("Team Raptors \(allPlayers["Phillip Helm"]) + \(allPlayers["Les Clay"]) + \(allPlayers["Herschel Krustofski"]) + \(allPlayers["Ben Finkelstein"]) + \(allPlayers["Chloe Alaska"]) + \(allPlayers["Arnold Willis"])")
-}
-
-
-//Each team's players collection variable//
-
-var teamDragons : [String:String] = ["Team Dragon":"Joe Smith,Jill Tanner,Bill Bon,Eva Gordon,Matt Grill,Kimmy Stein"]
-
-var teamSharks : [String:String] = ["Team Sharks":"Karl Saygan,Suzane Greenberg,Diego Sotto,Sammy Adams,Sal Dali,Joe Kavalier"]
-
-var teamRaptors : [String:String] = ["Team Raptors":"Phillip Helm,Les Clay,Herschel Krustofski,Ben Finkelstein,Chloe Alaska,Arnold Willis"]
-
-
-//Average team height within 1.5 using If Statement//
-
-var averageHeight = 1.5
-if averageHeight == 1.5 {
-    print(teamDragons)
+for playersExperience in allPlayers {
+    if playersExperience["Soccer Experience"] == "YES" {
+        playersWithExperience.append(playersExperience)
     
-} else if averageHeight < 1.5 {
-    print(teamSharks)
+    }else{playersWithNoExperience.append(playersExperience)
     
-} else {
-    print(teamRaptors)
+  }
+     
+}
+
+
+var teamDragon : [[String:String]] = []
+var teamSharks : [[String:String]] = []
+var teamRaptors: [[String:String]] = []
+
+
+for teamsPlayers in playersWithExperience {
+    if teamDragon.count < teamSharks.count {
+        teamDragon.append(teamsPlayers)
+        
+    }else if teamSharks.count < teamRaptors.count {
+            teamSharks.append(teamsPlayers)
+        
+    }else{teamRaptors.append(teamsPlayers)
+
+   }
+
+}
+
+for teamsPlayers in playersWithNoExperience {
+    if teamDragon.count < teamSharks.count {
+        teamDragon.append(teamsPlayers)
+        
+    }else if teamSharks.count < teamRaptors.count {
+        teamSharks.append(teamsPlayers)
+        
+    }else {teamRaptors.append(teamsPlayers)
+        
+  }
     
 }
 
+//Final teams print//
 
-//Personalized guardians letters,using Function//
+teamDragon
+teamSharks
+teamRaptors
 
-func generatingPersonalizedLetter(teamPlayers: String, guardians: String,team: String) -> (String) {
-    let letterToGuardians = "Dear " + guardians + " I am going to be very pleased and happy to meet you on " + teamPlayers + " first practice for " + team + ".Best Regards!"
+
+//Personalized letters to guardians//
+
+func guardianLetters() {
     
-    return letterToGuardians
+    
+    let practiceDragon = "Dragons practice on March 17,at 1pm "
+    let practiceSharks = "Sharks practice on March 17,at 3pm"
+    let practiceRaptors = "Raptors practice on March 18,at 1pm"
+    
+    
+    for guardians in teamDragon {
+        print("Dear \(guardians["Guardians"]!) I'm going to be very pleased to meet you on your kid,\(guardians["Player name"]!) first \(practiceDragon)")
+        
+        
+    }
+    
+    for guardians in teamSharks {
+        print("Dear \(guardians["Guardians"]!) I'm going to be very pleased to meet you on your kid,\(guardians["Player name"]!) first \(practiceSharks)")
+       
+    }
+    
+    for guardians in teamRaptors {
+        print("Dear \(guardians["Guardians"]!) I'm going to be very pleased to meet you on your kid,\(guardians["Player name"]!) first \(practiceRaptors)")
+
+    }
+    
+    return
+
+    
 }
 
-print(generatingPersonalizedLetter(teamPlayers: "Joe's", guardians: "Jim and Jane",team: "Team Dragons on March 17,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Jill's", guardians: "Clara",team: "Team Dragons on March 17,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Bill's", guardians: "Sara and Jenny",team: "Team Dragons on March 17,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Eva's", guardians: "Wendy and Mike",team: "Team Dragons on March 17,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Matt's", guardians: "Charles and Sylvia",team: "Team Dragons on March 17,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Kimmy's", guardians: "Bill and Hillary",team: "Team Dragons on March 17,at 1pm"))
+guardianLetters()
 
-print(generatingPersonalizedLetter(teamPlayers: "Karl's", guardians: "Heather",team: "Team Sharks on March 17,at 3pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Suzane's", guardians: "Henrietta",team: "Team Sharks on March 17,at 3pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Diego's", guardians: "Robin and Sarika",team: "Team Sharks on March 17,at 3pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Sammy's", guardians: "Jeff",team: "Team Sharks on March 17,at 3pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Sal's", guardians: "Gala",team: "Team Sharks on March 17,at 3pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Joe's", guardians: "Sam and Elaine",team: "Team Sharks on March 17,at 3pm"))
 
-print(generatingPersonalizedLetter(teamPlayers: "Phillip's", guardians: "Thomas and Eva",team: "Team Raptors on March 18,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Les's", guardians: "Wynonna",team: "Team Raptors on March 18,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Herschel's", guardians: "Hyman and Rachel",team: "Team Raptors on March 18,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Ben's", guardians: "Aaron and Jill",team: "Team Raptors on March 18,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Chloe's", guardians: "David and Jamie",team: "Team Raptors on March 18,at 1pm"))
-print(generatingPersonalizedLetter(teamPlayers: "Arnold's", guardians: "Claire",team: "Team Raptors on March 18,at 1pm"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
